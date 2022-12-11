@@ -15,7 +15,7 @@ export function BooleanInput({item}) {
           <TouchableOpacity
             key={`BooleanInput_${i}`}
             onPress={() => setValue(el.value)}>
-            <Text style={{color: isActive ? colors.primary : colors.black}}>
+            <Text style={{color: isActive ? colors.primary : colors.text}}>
               {el.label}
             </Text>
           </TouchableOpacity>

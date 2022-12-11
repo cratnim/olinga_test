@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {BooleanInput} from './boolean';
+import {ImageInput} from './image';
 import {InputText} from './input';
 import {RadioInput} from './radio';
 
@@ -24,6 +25,7 @@ function fnSwitchQuestion(type, customProps) {
     case 'input_text':
       return <InputText {...customProps} />;
     case 'image':
+      return <ImageInput {...customProps} />;
     default:
       return <></>;
   }

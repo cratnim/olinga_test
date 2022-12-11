@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
+import {colors} from '../../../assets/colors';
 import {FormComponent} from '../form';
 
 export function RadioInput({item}) {
@@ -13,7 +14,9 @@ export function RadioInput({item}) {
           <TouchableOpacity
             key={`RadioInput_${i}`}
             onPress={() => setValue(el.label)}>
-            <Text style={{color: isActive ? 'blue' : 'black'}}>{el.label}</Text>
+            <Text style={{color: isActive ? colors.primary : colors.text}}>
+              {el.label}
+            </Text>
           </TouchableOpacity>
         );
       })}

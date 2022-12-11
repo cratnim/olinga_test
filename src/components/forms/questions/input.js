@@ -2,15 +2,11 @@ import React, {useState} from 'react';
 import {TextInput, View} from 'react-native';
 import {colors} from '../../../assets/colors';
 import {FormComponent} from '../form';
+import styles from './styles';
 
 export function InputText({item}) {
   const [value, setValue] = useState();
   const {children} = item;
-
-  const textInputStyle = {
-    flex: 1,
-    color: colors.grey,
-  };
 
   return (
     <View>
@@ -18,7 +14,7 @@ export function InputText({item}) {
         value={value}
         autoCapitalize={'none'}
         autoCorrect={false}
-        style={textInputStyle}
+        style={styles.inputLabelStyle}
         placeholderTextColor={colors.text}
         onChangeText={text => setValue(text)}
       />
