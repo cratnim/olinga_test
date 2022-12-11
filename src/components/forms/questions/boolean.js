@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
+import {colors} from '../../../assets/colors';
 import {BOOLEAN_INPUT} from '../../../assets/constant';
 import {FormComponent} from '../form';
 
@@ -14,7 +15,9 @@ export function BooleanInput({item}) {
           <TouchableOpacity
             key={`BooleanInput_${i}`}
             onPress={() => setValue(el.value)}>
-            <Text style={{color: isActive ? 'blue' : 'black'}}>{el.label}</Text>
+            <Text style={{color: isActive ? colors.primary : colors.black}}>
+              {el.label}
+            </Text>
           </TouchableOpacity>
         );
       })}
