@@ -1,6 +1,9 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import {FormComponent} from '../form';
+import {Require} from '../require';
+import formStyle from '../styles';
+import styles from './styles';
 
 function SectionComponent(props) {
   const {item, index} = props;
@@ -8,7 +11,10 @@ function SectionComponent(props) {
 
   return (
     <View key={index}>
-      <Text>{item.name}</Text>
+      <View style={[formStyle.contentStyle, styles.contentStyle]}>
+        <Text style={formStyle.textLabelStyle}>{item.name}</Text>
+        {item.compulsory && <Require />}
+      </View>
       {Array.isArray(children) && <FormComponent forms={children} />}
     </View>
   );

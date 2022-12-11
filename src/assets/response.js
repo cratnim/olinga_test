@@ -1,3 +1,3 @@
 export const response = {
-  templates: require('./templates.json'),
+  templates: require('./files/templates.json'),
 };

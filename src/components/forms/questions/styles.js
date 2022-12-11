@@ -2,9 +2,39 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../../assets/colors';
 
 export default StyleSheet.create({
+  fontStyle: {
+    fontSize: 15,
+    fontWeight: 'normal',
+    color: colors.text,
+  },
+  imageIconStyle: {
+    width: 25,
+    height: 25,
+    marginHorizontal: 6,
+    tintColor: colors.text,
+  },
+  radioContentStyle: {
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignItems: 'center',
+    paddingBottom: 6,
+  },
+  booleanContainerStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  booleanContentStyle: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: colors.grey,
+    padding: 8,
+    alignContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.white,
+  },
   imageContainerStyle: {
-    width: 120,
-    height: 120,
+    width: '32%',
+    height: 100,
     marginTop: 12,
     backgroundColor: colors.white,
     borderRadius: 6,
@@ -19,6 +49,11 @@ export default StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 6,
   },
+  iconDeleteStyle: {
+    width: 10,
+    height: 10,
+    tintColor: colors.white,
+  },
   imageDeleteStyle: {
     backgroundColor: colors.black,
     opacity: 0.8,
@@ -30,6 +65,7 @@ export default StyleSheet.create({
     position: 'absolute',
     top: 8,
     right: 8,
+    padding: 4,
   },
   inputLabelStyle: {
     width: '100%',
@@ -45,5 +81,9 @@ export default StyleSheet.create({
     backgroundColor: colors.white,
     shadowColor: colors.black,
     marginVertical: 10,
+  },
+  imageRowStyle: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 });

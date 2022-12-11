@@ -3,10 +3,11 @@ import {View} from 'react-native';
 import {MemoizedLogic} from './logics';
 import {MemoizedQuestion} from './questions';
 import {MemoizedSection} from './sections';
+import styles from './styles';
 
 export const FormComponent = ({value, forms = []}) => {
   return (
-    <View>
+    <View style={styles.padding}>
       {forms.map((item, index) => {
         const {type, children} = item;
         const customProps = {

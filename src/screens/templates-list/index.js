@@ -6,7 +6,7 @@ const TemplatesListScreen = ({navigation, route}) => {
   const templates = route?.params?.templates;
 
   const onPressTemplate = children => {
-    navigation.navigate('TemplatesDetail', {children});
+    navigation.navigate('Templates Detail', {children});
   };
 
   return (
