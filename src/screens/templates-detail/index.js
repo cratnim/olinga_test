@@ -1,10 +1,13 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import {FormComponent} from '../../components/forms';
+import styles from './styles';
 
-const TemplatesDetailScreen = () => {
+const TemplatesDetailScreen = ({route}) => {
+  const children = route?.params?.children;
   return (
-    <View>
-      <Text>TemplatesDetailScreen</Text>
+    <View style={styles.container}>
+      <FormComponent forms={children} />
     </View>
   );
 };

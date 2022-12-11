@@ -1,10 +1,29 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
+import styles from './styles';
 
-const TemplatesListScreen = () => {
+const TemplatesListScreen = ({navigation, route}) => {
+  const templates = route?.params?.templates;
+
+  const onPressTemplate = children => {
+    navigation.navigate('TemplatesDetail', {children});
+  };
+
   return (
     <View>
-      <Text>TemplatesListScreen</Text>
+      {templates.map((el, i) => {
+        if (el.type === 'template') {
+          return (
+            <TouchableOpacity
+              key={`FoldersList_${i}`}
+              style={styles.content}
+              onPress={() => onPressTemplate(el.children)}>
+              <Text>{el.name}</Text>
+            </TouchableOpacity>
+          );
+        }
+        return <></>;
+      })}
     </View>
   );
 };
